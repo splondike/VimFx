@@ -43,4 +43,9 @@ class Vim
     else
       return suppress
 
+  onClick: (event) ->
+    console.log(event.target, utils.isElementEditable(event.target))
+    if utils.isElementEditable(event.target)
+       this.enterMode('insert')
+
 exports.Vim = Vim
